@@ -6,23 +6,9 @@ use `min-width media queries see Andrea Bailey's Responsive Example for Media Qu
 
 */
 
-
 * {
 
-    box-sizing: border-box;  
-}
-
-#questions-wrapper.quiz-section {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
     
-    padding: 30px;
-    padding-top: 20px;
-    max-width: 400px   
 }
-
-
-#choices {
-    
-    border: none;
-}
-
-
