@@ -5,7 +5,7 @@
 		 *need to write a function that tests several conditions
 		*has the user has come to the end of the quiz
 		*give them a result and tally
-        *The score is updated i++
+        *The score not the currentQuestionIndex is updated i++
 --*/
 const state = {  
     currentScore: 0,
@@ -52,11 +52,12 @@ const state = {
     *let correctQuestionCounter = 0; 
     
 */
+//state.currentQuestion
+//
+//state.currentQuestion++
 
-/* --bug: incrementing every other index 0, 2, 4, 6 and stopping after index 4  */
-/* --Gets the HTML template for the data onto the screen  */
 function showQuestion() {
-    let currentQuestion = state.questionsBank[state.currentQuestionIndex];
+    let currentQuestion = state.currentQuestionIndex;
 	//I want to get the 'text' of currentQuestion onto the page
 	    $('h2').html(currentQuestion.text);
     let answersHTML= currentQuestion.choices.map(function(item, index) { 
@@ -72,28 +73,43 @@ function showQuestion() {
 };
 
 showQuestion();
+//
+//let QuestionOne = new Question(1, "correectanswer here")
+//let QustionTwo = new Question(2, "5 is the right answer")
+//let QuestionThree = new..
+//...new queston1 ( 1m "What is the flying speed of an swallow")
+//Question1.sentence
 
 function nextQuestion() {
 	$('button').on('click', function(){ 
 		console.log("click");
-		state.currentQuestionIndex+= 1;
-//		let appCount = state.currentQuestionIndex ++;
 		showQuestion();
-
-	});
-}
+		state.currentQuestionIndex+= 1;
+//		state.currentQuestionIndex;
+		console.log(state.currentQuestion)
+//	});
+//	if ( state.currentQuestionIndex.length; i++);
+//
+//}
 
 nextQuestion();
 
-//function endOfQuiz() {
-////
-//	if ( currentQuestion[state.questionIndex] > 10 ) {
-////	//	do something
-////	} else {
-//	restartQuiz
-////	}
 
-//}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
